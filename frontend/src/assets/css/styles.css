@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 :root {
-    --color-primary: #6820F7;
-    --color-secondary: #F77752;
-    --color-success: #27DB8A;
-    --color-info: #4F32DB;
-    --color-warning: #F7EB20;
+    --color-primary: #000;
+    --color-secondary: #FFAC00;
+    --color-success: #85FF30;
+    --color-info: #2B272B;
+    --color-warning: #610000;
+    --color-danger: #B50000;
+    --color-white: #F2F2F2;
+
+}
+
+@font-face{ 
+	font-family: 'StarWars';
+	src: url('../fonts/galaxy.woff');
 }
 
 html, body {
+    background-color: var(--color-primary);
     height: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'StarWars', 'Ubuntu', sans-serif;
 }
 
 #root {
@@ -66,3 +76,14 @@ html, body {
 .text-warning {
   color: var(--color-warning) !important;
 }
+
+
+.bg-warning {
+  background-color: var(--color-danger) !important;
+}
+
+.text-warning {
+  color: var(--color-danger) !important;
+}
+
+
