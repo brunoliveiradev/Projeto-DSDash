@@ -12,7 +12,7 @@
 	<artifactId>dsvendas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dsvendas</name>
-	<description>Project made by Bruno Oliveira during the Spring React Week sponsor by DevSuperior</description>
+	<description>Project made by Bruno Oliveira during the Spring React Week provided by DevSuperior</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
