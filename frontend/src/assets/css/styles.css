@@ -9,6 +9,9 @@
     --color-danger: #B50000;
     --color-white: #F2F2F2;
 
+
+    
+
 }
 
 @font-face{ 
@@ -33,6 +36,7 @@ html, body {
 }
 
 .footer {
+    font-family: 'Ubuntu';
     flex-shrink: 0;
     text-align: center;
 }

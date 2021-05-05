@@ -8,6 +8,7 @@ const BarChart = () => {
             horizontal: true,
         }
     },
+    colors: ['#124F30'],
 };
 
 const mockData = {

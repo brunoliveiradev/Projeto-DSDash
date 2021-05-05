@@ -15,7 +15,7 @@ function App() {
 
         <div className="row px-3">
           <div className="col-sm-6">
-            <h5 className="text-center text-secondary">SUCESS RATE (%)</h5>
+            <h5 className="text-center text-secondary"> MISSION SUCESS RATE (%)</h5>
             <BarChart />
           </div>
 
@@ -26,7 +26,7 @@ function App() {
         </div>
 
         <div className="py-3">
-          <h2 className="text-secondary">All Baskar Profit ($)</h2>
+          <h2 className="text-secondary">JEDI PROFILE</h2>
         </div>
         
         <DataTable />

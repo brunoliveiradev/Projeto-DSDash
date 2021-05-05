@@ -10,10 +10,11 @@ const DonutChart = () => {
   const options = {
     legend: {
       show: true
-    }
+    },
+
+    colors: ['#992720', '#787D75', '#C4C5C5', '#C7A552', '#124F30'],
   }
-
-
+  
   return (
     <Chart
       options={{ ...options, labels: mockData.labels }}
