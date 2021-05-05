@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private Environment env;
 
     //Liberar o aplicativo de gerenciamento do banco de dados H2 - necessário para funcionar correto com segurança
+    //View liberar para perfil de "test"
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
