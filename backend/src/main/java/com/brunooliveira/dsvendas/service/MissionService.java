@@ -1,6 +1,8 @@
 package com.brunooliveira.dsvendas.service;
 
 import com.brunooliveira.dsvendas.dto.MissionDTO;
+import com.brunooliveira.dsvendas.dto.MissionSuccessDTO;
+import com.brunooliveira.dsvendas.dto.MissionSumDTO;
 import com.brunooliveira.dsvendas.entities.Mission;
 import com.brunooliveira.dsvendas.repositories.JediRepository;
 import com.brunooliveira.dsvendas.repositories.MissionRepository;
@@ -9,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 //serviço que por sua vez chama um repositório
 @Service
@@ -30,5 +34,15 @@ public class MissionService {
         jediRepository.findAll();
         Page<Mission> result = repository.findAll(pageable);
         return result.map(MissionDTO::new);
+    }
+
+    @Transactional(readOnly = true)
+    public List<MissionSumDTO> amountGroupedByJedi() {
+        return repository.amountGroupedByJedi();
+    }
+
+    @Transactional(readOnly = true)
+    public List<MissionSuccessDTO> successGroupedByJedi() {
+        return repository.successGroupedByJedi();
     }
 }
