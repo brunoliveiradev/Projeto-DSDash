@@ -68,7 +68,7 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 ⚡️ Caso queira ver o backend funcionando, fiz o deploy no Heroku. [Clique aqui para conferir.](https://sds3-brunooliveira.herokuapp.com/) 
 
-* ⚡️ Como ainda não implementei as rotas, e a integração entre frontend e backend, ao entrar no site ira aparecer uma mensagem, tente colocar os seguintes caminhos ao final da URL para testar:
+* :warning: Como ainda não implementei as rotas, e a integração entre frontend e backend, ao entrar no site ira aparecer uma mensagem, tente colocar os seguintes caminhos ao final da URL para testar:
 
   * /jedis
 
@@ -80,7 +80,7 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
     
 
-👾 O projeto ainda está em desenvolvimento, mas até o momento consistiu em:
+👾 :construction: ​​ O projeto ainda está em desenvolvimento, mas até o momento consistiu em:
 
 - Criar projetos backend e frontend
 
