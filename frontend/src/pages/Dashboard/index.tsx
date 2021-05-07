@@ -10,7 +10,7 @@ function Dashboard() {
       <NavBar />
 
       <div className="container">
-        <h1 className="text-secondary py-3">PROFIT DASHBOARD</h1>
+        <h1 className="text-secondary py-3">MISSION DASHBOARD</h1>
 
         <div className="row px-3">
           <div className="col-sm-6">
