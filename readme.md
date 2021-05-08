@@ -45,8 +45,6 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 - [PostgreSQL](https://www.postgresql.org)
 
-- [ApexCharts](https://apexcharts.com/docs/react-charts/)
-
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
 - [Postman](https://www.postman.com)
@@ -62,47 +60,11 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 ## 💻 Projeto
 
-🚀 O repositório tem como propósito compartilhar o conhecimento absorvido juntamente com os códigos desenvolvidos na 3ª Semana Spring React proporcionado pela DevSuperior.
+🚀 O projeto consistuiu em criar um Dashboard com as tecnologias mais demandadas do mercado e o repositório tem como propósito compartilhar o conhecimento absorvido juntamente com os códigos desenvolvidos na 3ª Semana Spring React proporcionado pela DevSuperior.
 
-⚡️ Caso queira ver o frontend estatico funcionando, fiz o deploy no Netlify. [Clique aqui para conferir.](https://brunooliveira-dsdash.netlify.app/)
+👾  O projeto frontend e backend foi salvo neste monorepo, que consistiu inicialmente em montar o visual estatico (que se tornou dinâmico na integração), depois implementar o back end, seguindo um modelo de domínio e estruturação no padrão de camadas para implementar uma consulta paginada e consultas agrupadas para gráficos, e por fim fazendo a integração do back end e front end. 
 
-⚡️ Caso queira ver o backend funcionando, fiz o deploy no Heroku. [Clique aqui para conferir.](https://sds3-brunooliveira.herokuapp.com/) 
-
-* :warning: Como ainda não implementei as rotas, e a integração entre frontend e backend, ao entrar no site ira aparecer uma mensagem, tente colocar os seguintes caminhos ao final da URL para testar:
-
-  * /jedis
-
-  * /missions
-
-  * /amount-by-jedi
-
-  * /success-by-jedi
-
-    
-
-👾 :construction: ​​ O projeto ainda está em desenvolvimento, mas até o momento consistiu em:
-
-- Criar projetos backend e frontend
-
-- Salvar os projeto no Github em monorepo
-
-- Montar o visual estático do front end
-
-- Publicar o front end no Netlify
-
-- Implementar o back end:
-
-  - Modelo de domínio
-
-  - Estruturar o back end no padrão camadas
-
-  - Consulta paginada de vendas
-
-  - Consultas agrupadas para gráficos
-
-  - Implantação na nuvem usando o Heroku
-
-    
+⚡️ Caso queira ver o Dashboard funcionando, foi feito o deploy no Netlify. [Clique aqui para conferir.](https://brunooliveira-dsdash.netlify.app/)
 
 :blue_heart: Caso queria testar localmente:
 
@@ -110,11 +72,11 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 * ``` yarn install ```
 
-* ``` yarn start ```
+* Execute ``` yarn start ```  dentro da página frontend
 
   
 
-📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
+📫 Espero que gostem, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
 
 <br>
 
