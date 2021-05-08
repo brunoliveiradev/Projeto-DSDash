@@ -25,7 +25,7 @@ function Dashboard() {
         </div>
 
         <div className="py-3">
-          <h2 className="text-secondary">JEDI PROFILE</h2>
+          <h2 className="d-flex justify-content-center text-secondary ">JEDI Mission History</h2>
         </div>
 
         <DataTable />

@@ -1,4 +1,27 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { MissionPage } from "types/mission";
+import { formatLocalDate } from "utils/format";
+import { BASE_URL } from "utils/requests";
+
 function DataTable() {
+
+  const [page, setPage] = useState<MissionPage>({
+    first: true,
+    last: true,
+    number: 0,
+    totalElements: 0,
+    totalPages: 0,
+  });
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}/missions?page=0&size=20&sort=date,desc`)
+      .then(response => {
+        setPage(response.data);
+      })
+
+  }, []);
+
   return (
     <div className="table-responsive">
       <table className="table table-striped table-sm table-hover table-dark">
@@ -6,68 +29,22 @@ function DataTable() {
           <tr className="text-secondary bg-info">
             <th>Data</th>
             <th>Jedi</th>
-            <th>Planetas visitados</th>
-            <th>Inimigos eliminados</th>
+            <th className="text-center">Spaceships</th>
+            <th className="text-center">Inimigos Eliminados</th>
             <th>Baskar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Luke</td>
-            <td>22</td>
-            <td>55</td>
-            <td>15017.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Obi-Wan</td>
-            <td>27</td>
-            <td>33</td>
-            <td>1111.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Mandalorian</td>
-            <td>31</td>
-            <td>404</td>
-            <td>22222.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Yoda</td>
-            <td>51</td>
-            <td>250</td>
-            <td>6060.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Padme</td>
-            <td>14</td>
-            <td>5</td>
-            <td>10000.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Grogu</td>
-            <td>8</td>
-            <td>2</td>
-            <td>47.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Anakin</td>
-            <td>52</td>
-            <td>122</td>
-            <td>10017.00</td>
-          </tr>
-          <tr>
-            <td>22/04/2021</td>
-            <td>Han Solo</td>
-            <td>64</td>
-            <td>77</td>
-            <td>5017.00</td>
-          </tr>
+          {page.content?.map(item => (
+            <tr key={item.id}>
+              <td>{formatLocalDate(item.date, "dd/MM/yyyy") }</td>
+              <td>{item.jedi.name}</td>
+              <td className="text-center">{item.visited}</td>
+              <td className="text-center">{item.deals}</td>
+              <td>{item.amount.toFixed(2)}</td>
+            </tr>
+          ))}
+
         </tbody>
       </table>
     </div>
