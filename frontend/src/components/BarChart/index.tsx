@@ -1,32 +1,75 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
+import { MissionSuccess } from 'types/mission';
+import { round } from 'utils/format';
+import { BASE_URL } from 'utils/requests';
+
+
+type SeriesData = {
+  name: string;
+  data: number[];
+}
+
+
+type ChartData = {
+  labels: {
+    categories: string[];
+  },
+  series: SeriesData[];
+}
+
 
 const BarChart = () => {
-  
-  const options = {
-    plotOptions: {
-        bar: {
-            horizontal: true,
-        }
-    },
-    colors: ['#124F30'],
-};
 
-const mockData = {
+  // [nomeDoEstadoInterno, nomeDaFunçãoQueMudaEstado] = useState<parametro>(ValorInicial)
+  const [chartData, setChartData] = useState<ChartData>({
     labels: {
-      categories: ['Anakin', 'Mandalorian', 'Obi-Wan', 'Han Solo', 'Luke']
+      categories: []
     },
     series: [
-        {
-            name: "% Baskar Drop Rate",
-            data: [43.6, 87.1, 67.7, 45.6, 61.1]                   
-        }
+      {
+        name: "",
+        data: []
+      }
     ]
-};
- 
+  });
+
+    //useEffect: Executar algo na instanciação ou destruição do componente, observar estado
+    useEffect(() => {
+      axios.get(`${BASE_URL}/missions/success-by-jedi`)
+        .then((response) => {
+          const data = response.data as MissionSuccess[];
+          const myLabels = data.map(x => x.jediName);
+          const mySeries = data.map(x => round(100 * x.deals / x.visited, 1));
+  
+          setChartData({
+            labels: {
+              categories: myLabels
+            },
+            series: [
+              {
+                name: "Success Rate %",
+                data: mySeries
+              }
+            ]
+          });
+        });
+    }, []);
+
+  const options = {
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      }
+    },
+    colors: ['#124F30'],
+  };
+
   return (
     <Chart
-      options={{...options, xaxis: mockData.labels}}
-      series={mockData.series}
+      options={{ ...options, xaxis: chartData.labels }}
+      series={chartData.series}
       type="bar"
       height="240"
     />
