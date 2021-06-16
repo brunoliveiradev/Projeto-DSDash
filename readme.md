@@ -68,7 +68,7 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
 :blue_heart: Caso queria testar localmente:
 
-*  ``` git clone https://github.com/BRUNOOLIVEIRA13/Projeto-DSDash.git ```
+*  ``` git clone https://github.com/brunoliveiradev/Projeto-DSDash.git ```
 
 * ``` yarn install ```
 
@@ -76,7 +76,7 @@ Esses códigos foram desenvolvidos utilizando as seguintes tecnologias/framework
 
   
 
-📫 Espero que gostem, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
+📫 Espero que gostem, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunoliveiradev/)
 
 <br>
 
